@@ -1,0 +1,63 @@
+@font-face {
+    font-family: Roboto;
+    src: url(fonts/Roboto/Roboto-medium.ttf);
+}
+div.meteo-card{
+    font-family: Roboto;
+    background-color: #FFF;
+    padding: 16px;
+    border-radius: 8px;
+}
+div.meteo-card h1{
+    margin:0;
+}
+div.meteo-card div.weather-now{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+div.meteo-card div.weather-now div.desc div.temp{
+    font-size: 40px;
+}
+div.meteo-card div.weather-now div.desc div.weather-description{
+    font-size: 16px;
+    text-align: center;
+}
+div.meteo-card div.weather-now div.desc-detailled{
+    font-size: 16px;
+    text-align: left;
+    margin-left: 20px;
+}
+
+div.meteo-card div.hourly{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid grey;
+}
+div.meteo-card div.hourly div.card{
+    text-align: center;
+    margin: 8px 0;
+}
+div.meteo-card div.hourly div.card div.hour{
+    font-size: 14px;
+    color: grey;
+}
+div.meteo-card div.hourly div.card div.temp{
+    font-size: 20px;
+}
+
+div.meteo-card div.daily{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid grey;
+}
+div.meteo-card div.daily div.card{
+    text-align: center;
+    margin: 8px 0;
+    padding: 0 8px;
+}

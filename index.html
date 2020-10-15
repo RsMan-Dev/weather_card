@@ -14,7 +14,12 @@
 
     <script src="assets/js/weather-card.js"></script>
     <script>
-        createWeatherCard(find('.container'), 2);
+        fetch(`assets/config.json`)
+            .then(response => {
+                response.json().then(json => {
+                    createWeatherCard(find('.container'), json.owm_api_key, 2);
+                });
+            });
     </script>
 </body>
 </html>

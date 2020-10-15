@@ -13,8 +13,9 @@ function find(selector, parent, all){
         }
     }
 }
-function createWeatherCard(el, icon_scale, units, lang, gelocalize, pos){
+function createWeatherCard(el, api_key, icon_scale, units, lang, gelocalize, pos){
     object = {
+        api_key: api_key,
         pos: pos !== undefined ? pos : { lat:0 , lon:0 },
         units: units !== undefined ? units : "metric",
         icon_scale: icon_scale !== undefined ? icon_scale : "metric",
@@ -43,7 +44,7 @@ function createWeatherCard(el, icon_scale, units, lang, gelocalize, pos){
 
         update: function(){
             self = this;
-            fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${this.pos.lat}&lon=${this.pos.lon}&appid=40c8d83dda5769debb80f7c1561756aa&lang=${this.lang}&units=${this.units}`)
+            fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${this.pos.lat}&lon=${this.pos.lon}&appid=${this.api_key}&lang=${this.lang}&units=${this.units}`)
                 .then(response => {
                     response.json().then(json => {
                         console.log(json);
